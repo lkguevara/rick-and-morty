@@ -17,7 +17,7 @@ export default function Card({name, species, gender, image, onClose}) {
          </div>
         
          
-         <h1 className="text-2xl font-bold text-gray-800 dark:text-white leading-none">{name}</h1>
+         <h1 className="text-2xl font-bold text-black">{name}</h1>
          <div className="flex justify-center items-center gap-3 pb-5">
             <span className="text-gray-500 dark:text-gray-400">{species}</span>
             <span className="text-gray-500 dark:text-gray-400">{gender}</span>
