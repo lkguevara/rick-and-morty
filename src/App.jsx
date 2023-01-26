@@ -1,17 +1,32 @@
 import './App.css'
 import Cards from './components/Cards'
-import Navbar from './components/Navbar'
-import SearchBar from './components/SearchBar'
-import characters from './data.js'
+import Nav from './components/Nav'
+import {useState, useEffect} from 'react'
 
 
 function App () {
+  const [characters, setCharacters] = useState([]);
+
+  function onSearch(character) {
+    fetch(`https://rickandmortyapi.com/api/character/${character}`)
+       .then((response) => response.json())
+       .then((data) => {
+          if (data.name) {
+             setCharacters((oldChars) => [...oldChars, data]);
+          } else {
+             window.alert('No hay personajes con ese ID');
+          }
+       });
+ }
+
+ function onClose(id) {
+    setCharacters(characters.filter((character) => character.id !== id));
+  }
+
   return (
     <>
-      <Navbar />
-      <Cards
-        characters={characters}
-      />
+      <Nav onSearch={onSearch} />
+      <Cards characters = {characters} onClose={onClose}/>
       
     </>
       

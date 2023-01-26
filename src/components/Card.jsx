@@ -1,10 +1,10 @@
-export default function Card({name, species, gender, image, onClose}) {
+export default function Card({id, name, species, gender, image, onClose}) {
 
    return (
       
-      <div className="flex flex-col bg-white rounded-3xl border-2 border-green-600 items-center w-64 shadow-lg ">
+      <div className="flex flex-col bg-white rounded-3xl border-2 border-green-600 items-center w-64 shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
          <div className="m-4 flex flex-col justify-end"> 
-            <button  onClick={onClose}>X</button>  
+            <button onClick={onClose}>X</button>  
          </div>
          
          <div className= "">
