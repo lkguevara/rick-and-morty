@@ -8,7 +8,7 @@ const Navbar = ({onSearch}) => {
 
   return (
     <div>
-        <nav className='grid grid-cols-1 gap-3 sm:grid-cols-3 justify-items-center bg-white h-16 p-2'>
+        <nav className='grid grid-cols-1 gap-3 sm:grid-cols-3 justify-items-center bg-white h-auto p-2'>
             <SearchBar onSearch = {onSearch}/>
             <a className='flex items-center' href="#">
               <img className='w-20 ' src={logo} alt="" />

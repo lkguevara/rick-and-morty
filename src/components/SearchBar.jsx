@@ -14,6 +14,7 @@ export default function SearchBar({onSearch}) {
    
    return (
       <div className="flex items-center">
+      <form action="">
          <input 
             className='border-2 h-8 py-4 w- text-center rounded-lg mr-4 items-center text-color-green-600' 
             type="search" 
@@ -26,6 +27,8 @@ export default function SearchBar({onSearch}) {
          >
             <BsPlusCircle />
          </button>
+      </form>
+         
 
       </div>
    );
