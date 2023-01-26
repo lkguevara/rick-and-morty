@@ -1,4 +1,6 @@
+import { BsPlusCircle } from "react-icons/bs";
 import {useState, useEffect} from 'react'
+
 
 export default function SearchBar({onSearch}) {
    const [character, setCharacter] = useState("");
@@ -11,18 +13,18 @@ export default function SearchBar({onSearch}) {
 
    
    return (
-      <div>
+      <div className="flex items-center">
          <input 
-            className='border-2 h-8 text-center p-4 rounded-lg mr-4' 
+            className='border-2 h-8 py-4 w- text-center rounded-lg mr-4 items-center text-color-green-600' 
             type="search" 
-            placeholder='buscar' 
+            placeholder='Agregar' 
             value={character}
             onChange={handleSearch}
          />
          <button 
             onClick={() => onSearch(character)}
          >
-            Agregar
+            <BsPlusCircle />
          </button>
 
       </div>
