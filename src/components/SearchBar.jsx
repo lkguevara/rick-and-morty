@@ -13,6 +13,8 @@ export default function SearchBar({onSearch}) {
 
    function handleSubmit(e) {
       e.preventDefault();
+      // vaciar el input ingresado
+      e.target.reset();
    }
    
    return (
