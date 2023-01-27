@@ -23,7 +23,7 @@ export default function SearchBar({onSearch}) {
          <input 
             className='border-2 h-8 py-4 w- text-center rounded-lg mr-4 items-center text-color-green-600' 
             type="search" 
-            placeholder='Agregar' 
+            placeholder='Ingresa ID' 
             // value={character}
             onChange={handleSearch}
          />

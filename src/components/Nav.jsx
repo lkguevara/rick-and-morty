@@ -13,7 +13,7 @@ const Navbar = ({onSearch}) => {
             <SearchBar onSearch = {onSearch}/>
             <NavLink to='/Home' className='text-gray-500 hover:text-gray-900 flex items-center'><img className='w-20 ' src={logo} alt="" /></NavLink>
             
-            <a className='flex items-center' href="https://github.com/lkguevara" target="_blank" rel="noopener noreferrer">
+            <a className='flex items-center text-lg font-medium text-black' href="https://github.com/lkguevara" target="_blank" rel="noopener noreferrer">
             <NavLink to='/about' className='text-gray-500 hover:text-gray-900'>About</NavLink>
                 <BsGithub className="h-6 m-2 w-10" aria-hidden="true" />
             </a>
