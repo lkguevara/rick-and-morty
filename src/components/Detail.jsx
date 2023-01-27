@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import {useState, useEffect} from 'react'
 
 const Detail = () => {
@@ -9,7 +9,8 @@ const Detail = () => {
   // Crea un estado local con el nombre character.
   const [character, setCharacter] = useState({});
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
+
 
 
   
@@ -32,9 +33,9 @@ const Detail = () => {
   return (
     console.log(id),
     <div>
-      {/* <button className={styles.buttonBack} onClick = { () => navigate (-1)}>
+      <button className='border border-slate-300 hover:border-green-600 bg-lime-600 p-2 rounded-lg hover:bg-lime-500 text-white m-10' onClick = { () => navigate (-1)}>
         Volver
-      </button> */}
+      </button>
       <div >
         <h1 className='text-2xl font-bold text-green-900 text-center my-10'>Nombre: {character.name} </h1>
         <img className='rounded-full border-red-700 w-60 h-60 mb-5 flex justify-center text-center m-auto' src={character.image} alt={character.name} />
