@@ -8,6 +8,12 @@ function App () {
   const [characters, setCharacters] = useState([]);
 
   function onSearch(character) {
+
+    if (characters.some((c) => c.id === parseInt(character))) {
+       window.alert('Ya agregaste este personaje');
+       return;
+    }
+    
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
        .then((response) => response.json())
        .then((data) => {
