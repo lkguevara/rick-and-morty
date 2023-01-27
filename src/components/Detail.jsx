@@ -43,8 +43,9 @@ const Detail = () => {
           <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Especie:</span> {character.species}</h2>
           <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Status:</span> {character.status}</h2>
           <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Genero:</span> {character.gender}</h2>
-          {/* <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Origen:</span> {character.origin.name}</h2>
-          <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Location:</span> {character.location.name}</h2> */}
+          <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Origen:</span> {character.origin ? character.origin.name : 'Desconocido'}</h2>
+          <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Location:</span> {character.location ? character.location.name : 'Desconocido'}</h2>
+          <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Creado:</span> {character.create}</h2>
         </div>
         
        
