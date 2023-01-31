@@ -21,7 +21,7 @@ export default function SearchBar({onSearch}) {
       <div className="flex items-center">
       <form onSubmit={handleSubmit}>
          <input 
-            className='border-2 h-8 py-4 w-28 text-center rounded-lg mr-4 items-center text-color-green-600' 
+            className='border-2 h-8 py-4 w-52 text-center rounded-lg mr-4 items-center text-color-green-600' 
             type="search" 
             placeholder='Ingresa ID' 
             // value={character}
