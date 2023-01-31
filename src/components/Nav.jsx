@@ -31,7 +31,7 @@ const Navbar = ({onSearch}) => {
               <BsGithub className="h-6 m-2 w-10" aria-hidden="true" />
             </NavLink>
 
-            // cerrar sesión
+            
             <NavLink to='/' className='text-black font-bold hover:text-gray-900 flex items-center'>Logout</NavLink>
                        
             
