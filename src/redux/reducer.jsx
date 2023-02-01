@@ -1,4 +1,4 @@
-import {ADD_FAVORITE, REMOVE_FAVORITE} from './Types';
+import {ADD_FAVORITE, REMOVE_FAVORITE} from './types';
 
 const initialState = {
   myFavorites: [],
