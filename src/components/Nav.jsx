@@ -28,6 +28,7 @@ const Navbar = ({onSearch}) => {
            <NavLink to='/Home' className='font-bold text-sky-700 hover:text-sky-600 flex items-center mr-5'>Home</NavLink>
             
             <NavLink to='/about' className='font-bold text-sky-700 hover:text-sky-600 flex items-center mr-5'>About</NavLink>
+            <NavLink to='/favorites' className='font-bold text-sky-700 hover:text-sky-600 flex items-center mr-5'>Favoritos</NavLink>
             <NavLink to='/' className='font-bold text-sky-700 hover:text-sky-600 flex items-center '>Logout</NavLink>
             <NavLink 
               className='flex items-center text-lg font-medium text-black'

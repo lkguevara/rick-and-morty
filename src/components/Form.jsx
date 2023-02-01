@@ -33,7 +33,7 @@ const handleSubmit = (event) => {
 
   return (
     <div class="bg-gradient-to-r from-rose-100 to-teal-100 h-screen flex justify-center items-center" >
-        <div class="rounded-lg bg-green-700 bg-opacity-30 px-16 py-10 shadow-lg backdrop-blur-md flex justify-center items-center md:w-3/6 lg:w-2/6 w-4/5">
+        <div class="rounded-lg bg-gradient-to-r from-rose-200 to-teal-300 bg-opacity-30 px-16 py-10 shadow-lg backdrop-blur-md flex justify-center items-center md:w-3/6 lg:w-2/6 w-4/5">
             <div className='flex flex-col justify-center items-center'>
                 <div class="mb-8 flex flex-col items-center">
                     <img src="https://cdn.icon-icons.com/icons2/1390/PNG/512/rick_96214.png" width="100" alt="" srcset="" />
@@ -54,7 +54,7 @@ const handleSubmit = (event) => {
                             value={userData.email}
                             onChange={handleInputChange}
                         />
-                        <p className='bg-green-400 mb-5'>{error.email}</p>
+                        <p className='bg-sky-700 mb-5 text-white text-center rounded-lg'>{error.email}</p>
                     </div>
 
                     <div>
@@ -67,7 +67,7 @@ const handleSubmit = (event) => {
                             value={userData.password}
                             onChange={handleInputChange}
                         />
-                        <p className='bg-green-400 mt-5'>{error.password}</p>
+                        <p className='bg-sky-700 mt-5 text-white text-center rounded-lg'>{error.password}</p>
                     </div>
                     <div class="mt-8 flex justify-center text-lg text-black ">
                         <button className='rounded-xl bg-sky-600 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-sky-700'>
@@ -78,8 +78,8 @@ const handleSubmit = (event) => {
                 </form>
                 <div className='mt-20'>
                         <Tooltip
-                            className="text-sky-600 w-64 "
-                            content="usuario: rick@rickymorty.com password: asd123"
+                            className="text-sky-600 w-52 "
+                            content="usuario: rick@user.com password: asd123"
                             animate={{
                                 mount: { scale: 1, y: 0 },
                                 unmount: { scale: 0, y: 25 },

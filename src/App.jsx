@@ -6,6 +6,7 @@ import {Route, Routes, useLocation, useNavigate} from 'react-router-dom'
 import About from './components/About'
 import Detail from './components/Detail'
 import Form from './components/Form'
+import Favorite from './components/Favorites'
 
 function App () {
    const location = useLocation();
@@ -13,7 +14,7 @@ function App () {
    const [characters, setCharacters] = useState([]);
 
    const [accessToken, setAccessToken] = useState(false);
-   let username = 'rick@rickymorty.com';
+   let username = 'rick@user.com';
    let password = 'asd123';
 
    useEffect(() => {
@@ -69,7 +70,7 @@ function App () {
          <Route path='/detail/:id' element={<Detail /> }/>
          <Route path='*' element={<h1>404 Not Found</h1>} />
          <Route path='/' element={<Form Login={login} Logout={logout}/>} />
-
+         <Route path= '/favorites' element={<Favorite />} />
       </Routes>
       
 
