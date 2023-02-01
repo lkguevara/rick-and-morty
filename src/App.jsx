@@ -8,6 +8,7 @@ import Detail from './components/Detail'
 import Form from './components/Form'
 import Favorite from './components/Favorites'
 
+
 function App () {
    const location = useLocation();
    const navigate = useNavigate();
@@ -20,6 +21,22 @@ function App () {
    useEffect(() => {
       !accessToken && navigate('/');
    }, [accessToken]);
+   
+// agregar localstorage
+   useEffect(() => {
+      const obtenerLS = () => {
+         const charactersLS = JSON.parse(localStorage.getItem("characters")) ?? [];
+         setCharacters(charactersLS);
+      }
+      obtenerLS();
+   }, []);
+
+   
+   useEffect(() => {
+      console.log("cambio paciente")
+      localStorage.setItem("characters", JSON.stringify(characters))
+   }, [characters])
+      
 
    function login (userData) {
       if (userData.email === username && userData.password === password) {
