@@ -65,7 +65,7 @@ export default function Card({id, name, species, gender, image, onClose}) {
             />
          </div>
 
-         <div className="bg-sky-700 w-full rounded-b-2xl">
+         <div className="bg-green-800 w-full rounded-b-2xl">
             <NavLink to={`/detail/${id}`}>
                <h1 className="text-2xl font-bold text-white text-center">{name}</h1>
             </NavLink>
