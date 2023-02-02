@@ -64,14 +64,18 @@ export default function Card({id, name, species, gender, image, onClose}) {
                alt={name} 
             />
          </div>
-        
-         <NavLink to={`/detail/${id}`}>
-            <h1 className="text-2xl font-bold text-black text-center">{name}</h1>
-         </NavLink>
-         <div className="flex justify-center items-center gap-3 pb-5">
-            <span className="text-gray-500 dark:text-gray-400">{species}</span>
-            <span className="text-gray-500 dark:text-gray-400">{gender}</span>
+
+         <div className="bg-sky-700 w-full rounded-b-2xl">
+            <NavLink to={`/detail/${id}`}>
+               <h1 className="text-2xl font-bold text-white text-center">{name}</h1>
+            </NavLink>
+            <div className="flex justify-center items-center gap-3 pb-5">
+               <span className="text-white dark:text-gray-400">{species}</span>
+               <span className="text-white dark:text-gray-400">{gender}</span>
+            </div>
          </div>
+        
+         
          
          
       </div>
