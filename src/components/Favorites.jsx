@@ -31,13 +31,13 @@ const Favorites = () => {
         {/*Ordenamiento ascentende y por género */}
         <h1 className='text-4xl text-center text-sky-700 font-bold mb-10'>Favoritos</h1>
         <div>
-            <select onChange={handleOrder} className='m-5' name="order" defaultValue={"DEFAULT"}>
+            <select onChange={handleOrder} className='m-5 p-2 rounded-lg' name="order" defaultValue={"DEFAULT"}>
                 <option value="DEFAULT" disabled="disabled">Ordenar por</option>
                 <option value="Descendente">Descendente</option>
                 <option value="Ascendente">Ascendente</option>
 
             </select>
-            <select onChange={handleFilter} name="filter" defaultValue={"DEFAULT"}>
+            <select onChange={handleFilter} className = "p-2 rounded-lg" name="filter" defaultValue={"DEFAULT"}>
                 <option value="DEFAULT" disabled="disabled">Ordenar por</option>
                 {/* <option value="Male">Todos</option> */}
                 <option value="Male">Male</option>

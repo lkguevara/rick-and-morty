@@ -14,7 +14,7 @@ function App () {
    const navigate = useNavigate();
    const [characters, setCharacters] = useState([]);
 
-   {/** 
+
    const [accessToken, setAccessToken] = useState(false);
    let username = 'rick@user.com';
    let password = 'asd123';
@@ -22,7 +22,7 @@ function App () {
    useEffect(() => {
       !accessToken && navigate('/');
    }, [accessToken]);
- */}  
+   
 // agregar localstorage
    useEffect(() => {
       const obtenerLS = () => {
