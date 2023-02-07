@@ -34,16 +34,16 @@ export default function Card({id, name, species, gender, image, onClose}) {
 
    return (
       
-      <div className="flex flex-col bg-white rounded-3xl border-2 border-green-600 items-center w-64 shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
+      <div className="flex flex-col bg-sky-800 rounded-3xl border-2 border-sky-800 items-center w-64 shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
          <div className="m-4 px-6 flex flex-row justify-between w-full">     
             {
                isFav ? (
                   <button onClick={handleFavorite} className="w-52">
-                     <BsFillHeartFill className="text-red-500 text-xl"/>
+                     <BsFillHeartFill className="text-white text-xl"/>
                   </button>
                ) : (
                   <button onClick={handleFavorite} className="w-52">
-                     <BsHeart className="text-red-500 text-xl"/>
+                     <BsHeart className="text-white text-xl"/>
                   </button>
                )
             }     
@@ -51,7 +51,7 @@ export default function Card({id, name, species, gender, image, onClose}) {
             
             <button 
                onClick={onClose}>
-               <BsXLg className="text-cyan-800"/>
+               <BsXLg className="text-white"/>
             </button>  
          </div>
          
@@ -65,14 +65,14 @@ export default function Card({id, name, species, gender, image, onClose}) {
             />
          </div>
 
-         <div className="bg-green-800 w-full rounded-b-2xl">
+         <div className="bg-white w-full rounded-b-2xl">
             <NavLink to={`/detail/${id}`}>
-               <h1 className="text-2xl font-bold text-white text-center">{name}</h1>
+               <h1 className="text-2xl font-bold text-zinc-800 text-center">{name}</h1>
             </NavLink>
             <div className="flex justify-center items-center gap-3 pb-5">
-               <span className="text-white dark:text-gray-400">{species}</span>
-               <span className="text-white dark:text-gray-400">{gender}</span>
-               <span className="text-white dark:text-gray-400 font-bold">#{id}</span>
+               <span className="text-zinc-800 dark:text-gray-400">{species}</span>
+               <span className="text-zinc-800 dark:text-gray-400">{gender}</span>
+               <span className="text-zinc-800 dark:text-gray-400 font-bold">#{id}</span>
             </div>
          </div>
         

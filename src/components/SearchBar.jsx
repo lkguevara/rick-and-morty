@@ -1,4 +1,4 @@
-import { BsPlusCircle } from "react-icons/bs";
+import { RiSearch2Line } from 'react-icons/ri'
 import {useState, useEffect} from 'react'
 
 
@@ -21,16 +21,19 @@ export default function SearchBar({onSearch}) {
       <div className="flex items-center">
       <form onSubmit={handleSubmit}>
          <input 
-            className='border-2 h-8 py-4 w-52 text-center rounded-lg mr-4 items-center text-color-green-600' 
+            className='sm:w-64 w-44 text-lg text-center items-center rounded-md text-color-green-600 outline-none py-1' 
             type="search" 
             placeholder='Número personaje' 
             // value={character}
             onChange={handleSearch}
+           
          />
+         
          <button 
             onClick={() => onSearch(character)}
          >
-            <BsPlusCircle />
+         <RiSearch2Line className='text-black relative right-6 pt-1'/>
+         
          </button>
       </form>
          

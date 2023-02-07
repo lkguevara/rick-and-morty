@@ -33,20 +33,20 @@ const Detail = () => {
   return (
     console.log(id),
     <div>
-       <button className='border border-slate-300 hover:border-green-600 bg-green-700 p-2 rounded-lg hover:bg-green-600 text-white m-10' onClick = { () => navigate (-1)}>
+       <button className='border border-slate-300 p-2 bg-zinc-600 rounded-lg hover:bg-zinc-400 text-white m-10' onClick = { () => navigate (-1)}>
             Volver
         </button>
-      <div >
-        <h1 className='text-2xl font-bold text-green-900 text-center my-10'>Nombre: {character.name} </h1>
+      <div className='text-white'>
+        <h1 className='text-2xl font-bold text-center my-10'>Nombre: {character.name} </h1>
         <img className='rounded-full border-red-700 w-60 h-60 mb-5 flex justify-center text-center m-auto' src={character.image} alt={character.name} />
 
         <div className='grid grid-cols-1 text-center sm:grid-cols-3'>
-          <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Especie:</span> {character.species}</h2>
-          <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Status:</span> {character.status}</h2>
-          <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Genero:</span> {character.gender}</h2>
-          <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Origen:</span> {character.origin ? character.origin.name : 'Desconocido'}</h2>
-          <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Location:</span> {character.location ? character.location.name : 'Desconocido'}</h2>
-          <h2 className='text-lg text-green-900 p-5'><span className='text-2xl font-bold text-green-700 ml-10'>Creado:</span> {character.create}</h2>
+          <h2 className='text-lg p-5'><span className='text-2xl font-bold text-white ml-10'>Especie:</span> {character.species}</h2>
+          <h2 className='text-lg p-5'><span className='text-2xl font-bold text-white ml-10'>Status:</span> {character.status}</h2>
+          <h2 className='text-lg p-5'><span className='text-2xl font-bold text-white ml-10'>Genero:</span> {character.gender}</h2>
+          <h2 className='text-lg p-5'><span className='text-2xl font-bold text-white ml-10'>Origen:</span> {character.origin ? character.origin.name : 'Desconocido'}</h2>
+          <h2 className='text-lg p-5'><span className='text-2xl font-bold text-white ml-10'>Location:</span> {character.location ? character.location.name : 'Desconocido'}</h2>
+          <h2 className='text-lg p-5'><span className='text-2xl font-bold text-white ml-10'>Creado:</span> {character.create}</h2>
         </div>
         
        

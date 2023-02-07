@@ -24,20 +24,20 @@ const Favorites = () => {
 
   return (
     <>
-        <button className='border border-slate-300 hover:border-green-600 bg-green-700 p-2 rounded-lg hover:bg-green-600 text-white m-10' onClick = { () => navigate (-1)}>
+        <button className='border border-slate-300 bg-zinc-600 p-2 rounded-lg hover:bg-zinc-400 text-white m-10' onClick = { () => navigate (-1)}>
             Volver
         </button>
 
         {/*Ordenamiento ascentende y por género */}
-        <h1 className='text-4xl text-center text-sky-700 font-bold mb-10'>Favoritos</h1>
+        <h1 className='text-4xl text-center text-white font-bold mb-10 '>Favoritos</h1>
         <div>
-            <select onChange={handleOrder} className='m-5 p-2 rounded-lg' name="order" defaultValue={"DEFAULT"}>
+            <select onChange={handleOrder} className='m-5 p-2 text-white bg-sky-800 rounded-lg hover:bg-sky-600' name="order" defaultValue={"DEFAULT"}>
                 <option value="DEFAULT" disabled="disabled">Ordenar por</option>
                 <option value="Descendente">Descendente</option>
                 <option value="Ascendente">Ascendente</option>
 
             </select>
-            <select onChange={handleFilter} className = "p-2 rounded-lg" name="filter" defaultValue={"DEFAULT"}>
+            <select onChange={handleFilter} className = "p-2 text-white bg-sky-800 rounded-lg hover:bg-sky-600 " name="filter" defaultValue={"DEFAULT"}>
                 <option value="DEFAULT" disabled="disabled">Ordenar por</option>
                 {/* <option value="Male">Todos</option> */}
                 <option value="Male">Male</option>
@@ -45,7 +45,7 @@ const Favorites = () => {
                 <option value="Genderless">Genderless</option>
                 <option value="unknown">unknown</option>
             </select>
-            <button className='border border-slate-300 hover:border-green-600 bg-green-700 p-2 rounded-lg hover:bg-green-600 text-white m-10' onClick={()=> dispatch(resetCards())}>
+            <button className='border border-slate-300 p-2 bg-zinc-600 rounded-lg hover:bg-zinc-400 text-white m-10' onClick={()=> dispatch(resetCards())}>
                     Reset
             </button>
             
