@@ -12,7 +12,7 @@ const notFound = (res) => {
 
 http
     .createServer((req, res) => {
-        // res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Origin', '*');
 
         const allUrl = req.url.split('/'); // ["", "rickandmorty", "characters", ":id"] lo que hace es separar el url por el slash y lo guarda en un array
         const id = Number(allUrl.pop()); // lo que hace es eliminar el ultimo elemento del array y lo guarda en una variable
