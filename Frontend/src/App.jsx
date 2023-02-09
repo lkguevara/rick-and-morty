@@ -60,7 +60,7 @@ function App () {
        return;
     }
     
-    fetch(`http://localhost:3001/rickandmorty/character/${character}`)
+    fetch(`http://localhost:3001/onsearch/${character}`)
        .then((response) => response.json())
        .then((data) => {
           if (data.name) {
