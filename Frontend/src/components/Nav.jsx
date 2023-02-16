@@ -20,7 +20,7 @@ const Navbar = ({onSearch}) => {
             
             <NavLink 
               className='flex items-center text-lg font-medium text-black'
-              to= "https://github.com/lkguevara" target="_blank"
+              to= "https://github.com/lkguevara/rick-and-morty" target="_blank"
             >
               <BsGithub className="h-6 w-10 text-white sm:col-span-1" aria-hidden="true" />
             </NavLink>

@@ -36,7 +36,7 @@ const handleSubmit = (event) => {
   return (
     <div className="bg-zinc-900 h-screen flex justify-center items-center" >
         <img  className='sm:w-2/5 lg:w-80 hidden sm:flex' src={login} alt="" />
-        <div class="rounded-lg bg-zinc-600 to-teal-300 bg-opacity-30 px-16 py-10 shadow-lg backdrop-blur-md flex justify-center items-center sm:w-3/6 md:w-3/6 lg:w-2/6 w-4/5">
+        <div className="rounded-lg bg-zinc-600 to-teal-300 bg-opacity-30 px-16 py-10 shadow-lg backdrop-blur-md flex justify-center items-center sm:w-3/6 md:w-3/6 lg:w-2/6 w-4/5">
         
             <div className='flex flex-col justify-center items-center'>
                 <div className="mb-8 flex flex-col items-center">

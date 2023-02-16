@@ -9,9 +9,9 @@ export default function Cards({characters, onClose}) {
       <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 p-6 justify-items-center">
          
          {
-            characters.map((character) => (
+            characters.map((character, index) => (
             <Card 
-               key={character.id}
+               key={index}
                id={character.id}
                name={character.name}
                species={character.species}

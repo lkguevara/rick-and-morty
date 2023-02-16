@@ -1,28 +1,51 @@
 import {ADD_FAVORITE, REMOVE_FAVORITE, FILTER, ORDER, RESET } from './types';
+import axios from 'axios';
 
-export const addFavorite = (item) => ({
-  type: ADD_FAVORITE,
-  payload: item,
-});
+export function addFavorite (character) {
+  return async function (dispatch) {
+   const response = await axios.post("http://localhost:3001/rickandmorty/fav", character)
+   const data = response.data
+   return dispatch({
+      type: ADD_FAVORITE,
+      payload: data,
+    })
+  }
+};
 
-export const removeFavorite = (id) => ({
-  type: REMOVE_FAVORITE,
-  payload: id,
-});
+export function removeFavorite(id) {
+  return async function (dispatch) {
+    const response = await axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`)
+    const data = response.data
+    return dispatch({
+       type: REMOVE_FAVORITE,
+       payload: data,
+     })
+   }
+}
 
-export const filterCards = (gender) => ({
-  type: FILTER,
-  payload: gender,
-});
+export function filterCards (gender) {
+  return {
+    type: FILTER,
+    payload: gender,
+  }
+  
+};
 
-export const orderCards = (id) => ({
-  type: ORDER,
-  payload: id,
-});
+export function orderCards (id) {
+  return {
+    type: ORDER,
+    payload: id,
+  }
+ 
+};
 
-export const resetCards = () => ({
-  type: RESET,
-});
+export function resetCards () {
+  return {
+    type: RESET,
+  }
+ 
+};
+
 
 
 

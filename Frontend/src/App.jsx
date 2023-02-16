@@ -1,21 +1,23 @@
 import './App.css'
-import Cards from './components/Cards'
-import Nav from './components/Nav'
-import {useState, useEffect} from 'react'
 import {Route, Routes, useLocation, useNavigate} from 'react-router-dom'
+// rutas
 import About from './components/About'
+import Cards from './components/Cards'
 import Detail from './components/Detail'
 import Form from './components/Form'
 import Favorite from './components/Favorites'
+
+// componentes
+import Nav from './components/Nav'
+import {useState, useEffect} from 'react'
 
 
 function App () {
    const location = useLocation();
    const navigate = useNavigate();
    const [characters, setCharacters] = useState([]);
-
-
    const [accessToken, setAccessToken] = useState(false);
+
    let username = 'rick@user.com';
    let password = 'asd123';
 
@@ -23,7 +25,7 @@ function App () {
       !accessToken && navigate('/');
    }, [accessToken]);
    
-// agregar localstorage
+/*// agregar localstorage
    useEffect(() => {
       const obtenerLS = () => {
          const charactersLS = JSON.parse(localStorage.getItem("characters")) ?? [];
@@ -37,7 +39,7 @@ function App () {
       
       localStorage.setItem("characters", JSON.stringify(characters))
    }, [characters])
-      
+   */ 
 
    function login (userData) {
       if (userData.email === username && userData.password === password) {
@@ -60,7 +62,7 @@ function App () {
        return;
     }
     
-    fetch(`http://localhost:3001/onsearch/${character}`)
+    fetch(`http://localhost:3001/rickandmorty/character/${character}`)
        .then((response) => response.json())
        .then((data) => {
           if (data.name) {
@@ -86,9 +88,9 @@ function App () {
          <Route path='/About' element={<About />}/>
          <Route path='/Home' element={<Cards characters = {characters} onClose={onClose}/>}/>
          <Route path='/detail/:id' element={<Detail /> }/>
-         <Route path='*' element={<h1>404 Not Found</h1>} />
          <Route path='/' element={<Form Login={login} Logout={logout}/>} />
          <Route path= '/favorites' element={<Favorite />} />
+         <Route path='*' element={<h1>404 Not Found</h1>} />
       </Routes>
       
 

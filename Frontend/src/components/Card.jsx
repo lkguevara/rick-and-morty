@@ -1,12 +1,10 @@
 import { BsXLg, BsFillHeartFill, BsHeart } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import { addFavorite, removeFavorite } from "../redux/actions";
-import { connect } from 'react-redux';
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-
-export default function Card({id, name, species, gender, image, onClose}) {
+export default function Card ({id, name, species, gender, image, onClose}) {
    const dispatch = useDispatch();
    const myFavorites = useSelector((state) => state.myFavorites);
    const [isFav, setIsFav] = useState(false);
@@ -23,8 +21,8 @@ export default function Card({id, name, species, gender, image, onClose}) {
    function handleFavorite() {
       if (isFav) {
          setIsFav(false);
-         // despachar la funcion removeFavorite
          dispatch(removeFavorite(id));
+      
       } else {
          setIsFav(true);
          // despachar la funcion addFavorite
@@ -83,18 +81,25 @@ export default function Card({id, name, species, gender, image, onClose}) {
    );
 
 }
-// export function mapDispatchToProps(dispatch) {
-//    return {
-//       addFavorite: (item) => dispatch(addFavorite(item)),
-//       removeFavorite: (id) => dispatch(removeFavorite(id)),
-//    };
-// }
 
-// export function mapStateToProps(state) {
-//    return {
-//       myFavorites: state.myFavorites,
-//    }  
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Card);
+/*
+export function mapStateToProps(state) {
+   return {
+     myFavorites: state.myFavorites
+   }
+ }
+ 
+ export function mapDispatchToProps(dispatch) {
+   return {
+     addFavorite : function (character) {
+       dispatch(addFavorite(character))
+     },
+     removeFavorites: function(id) {
+       dispatch(removeFavorite(id))
+     }
+   }
+ }
+ 
+ 
+ export default connect(mapStateToProps, mapDispatchToProps)(Card);*/
 

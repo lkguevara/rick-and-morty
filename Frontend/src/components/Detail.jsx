@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react'
 
 const Detail = () => {
   //  obtener el ID del personaje mediante useParams.
-  const { id } = useParams();
+  const { detailId } = useParams();
 
   // Crea un estado local con el nombre character.
   const [character, setCharacter] = useState({});
@@ -15,7 +15,7 @@ const Detail = () => {
 
   
   useEffect(() => {
-    fetch(`http://localhost:3001/rickandmorty/detail/${id}`)
+    fetch(`http://rickandmorty/detail/${detailId}`)
       .then((response) => response.json())
       .then((char) => {
         if (char.name) {

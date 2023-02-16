@@ -55,8 +55,8 @@ const Favorites = () => {
             
             <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 p-6 justify-items-center">
                 {
-                    myFavorites.length === 0 ? <h1 className='text-2xl text-center text-sky-700 font-bold mb-10'>No hay favoritos</h1> : myFavorites.map((favorite) => {
-                        return <Card key={favorite.id} {...favorite} />
+                    myFavorites.length === 0 ? <h1 className='text-2xl text-center text-sky-700 font-bold mb-10'>No hay favoritos</h1> : myFavorites.map((favorite, index) => {
+                        return <Card key={index} id={favorite.id} {...favorite} />
                     }
                     )
                     
