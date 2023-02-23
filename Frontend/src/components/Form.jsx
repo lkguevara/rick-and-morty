@@ -4,34 +4,36 @@ import Validation from '../utils/Validation'
 import { Tooltip, Button } from "@material-tailwind/react";
 import logo from '../assets/rick.svg'
 import login from '../assets/login-ram.png'
+import login2 from '../assets/login-ram-2.png'
 
 const Form = (props) => {
-  const [userData, setUserData] = useState({
-    name: '',
-    email: ''
-})
-
-const [error, setError] = useState({
-    name: '',
-    email: ''
-})
-
-const handleInputChange = (event) => {
-    const property = event.target.name;
-    setUserData({
-        ...userData,
-        [property]: event.target.value
+    const { Login, successLogin } = props;
+    const [userData, setUserData] = useState({
+        email: "",
+        password: ""
     })
-    setError(Validation({
-        ...userData,
-        [property]: event.target.value
-    }))
-}
 
-const handleSubmit = (event) => {
-    event.preventDefault();
-    props.Login(userData);
-}
+    const [error, setError] = useState({
+        ...userData
+    })
+
+    const handleInputChange = (event) => {
+        setUserData({
+            ...userData,
+            [event.target.name]: event.target.value
+        });
+        setError(
+            Validation({
+                ...userData,
+                [event.target.name]: event.target.value
+            })
+        )
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        Login(userData);
+    }
 
   return (
     <div className="bg-zinc-900 h-screen flex justify-center items-center" >
@@ -40,12 +42,13 @@ const handleSubmit = (event) => {
         
             <div className='flex flex-col justify-center items-center'>
                 <div className="mb-8 flex flex-col items-center">
-                    <img src="https://cdn.icon-icons.com/icons2/1390/PNG/512/rick_96214.png" width="100" alt="" srcset="" />
+                    <img src={login2} width="100" />
                     <img className='w-40 ' src={logo} alt="" />
                     <span className="text-white mt-5">Iniciar sesión</span>
                 </div>
                 <form 
                     onSubmit={handleSubmit}
+                    autoComplete="off"
                 >
                     <div>
                         {/* <label htmlFor="email">Usuario</label> */}
@@ -54,7 +57,7 @@ const handleSubmit = (event) => {
                             type="text" 
                             name="email"
                             placeholder="Usuario"
-                            value={userData.email}
+                            value= {userData.email}
                             onChange={handleInputChange}
                         />
                         <p className='bg-sky-700 mb-5 text-white text-center rounded-lg'>{error.email}</p>
@@ -64,7 +67,7 @@ const handleSubmit = (event) => {
                         {/* <label htmlFor="password">Constraña</label> */}
                         <input 
                             className='rounded-xl border-none bg-sky-300 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-white shadow-lg outline-none backdrop-blur-md w-44 sm:w-auto'
-                            type="text" 
+                            type="password" 
                             name="password" 
                             placeholder="Contraseña"
                             value={userData.password}

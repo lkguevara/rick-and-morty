@@ -1,6 +1,7 @@
 import {ADD_FAVORITE, REMOVE_FAVORITE, FILTER, ORDER, RESET } from './types';
 import axios from 'axios';
 
+/*
 export function addFavorite (character) {
   return async function (dispatch) {
    const response = await axios.post("http://localhost:3001/rickandmorty/fav", character)
@@ -10,8 +11,15 @@ export function addFavorite (character) {
       payload: data,
     })
   }
+};*/
+export function addFavorite (character) {
+  return {
+    type: ADD_FAVORITE,
+    payload: character,
+  }
 };
 
+/*
 export function removeFavorite(id) {
   return async function (dispatch) {
     const response = await axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`)
@@ -21,7 +29,15 @@ export function removeFavorite(id) {
        payload: data,
      })
    }
-}
+}*/
+
+export function removeFavorite(id) {
+  return {
+    type: REMOVE_FAVORITE,
+    payload: id,
+  }
+};
+
 
 export function filterCards (gender) {
   return {
