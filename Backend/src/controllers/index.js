@@ -50,11 +50,24 @@ const getDetailID = async function (req, res) {
   }
 };
 
+const getAllChars = async () => {
+  try {
+      const allChars = await Character.findAll();
+      return allChars;
+  }
+  catch (error) {
+      return {error: error.message}
+  }
+}
+
+
+
 
 
 
 module.exports = {
   getCharacterId, 
-  getDetailID
+  getDetailID,
+  getAllChars
 
 };

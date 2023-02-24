@@ -25,7 +25,7 @@ function App () {
       !accessToken && navigate('/');
    }, [accessToken]);
    
-/*// agregar localstorage
+// agregar localstorage
    useEffect(() => {
       const obtenerLS = () => {
          const charactersLS = JSON.parse(localStorage.getItem("characters")) ?? [];
@@ -39,7 +39,7 @@ function App () {
       
       localStorage.setItem("characters", JSON.stringify(characters))
    }, [characters])
-   */ 
+   
 
    function login (userData) {
       if (userData.email === username && userData.password === password) {
@@ -81,7 +81,12 @@ function App () {
     <>
       {
          location.pathname !== '/' && <Nav onSearch={onSearch} />
+          
+
       }
+
+     
+      
       
       
       <Routes >
