@@ -18,12 +18,12 @@ function App () {
    const [characters, setCharacters] = useState([]);
    const [accessToken, setAccessToken] = useState(false);
 
-   let username = 'rick@user.com';
-   let password = 'asd123';
+   // let username = 'rick@user.com';
+   // let password = 'asd123';
 
-   useEffect(() => {
-      !accessToken && navigate('/');
-   }, [accessToken]);
+   // useEffect(() => {
+   //    !accessToken && navigate('/');
+   // }, [accessToken]);
    
 // agregar localstorage
    useEffect(() => {
@@ -42,13 +42,8 @@ function App () {
    
 
    function login (userData) {
-      if (userData.email === username && userData.password === password) {
          setAccessToken(true);
-         window.alert('Bienvenido');
          navigate('/Home');
-      }else {
-         window.alert('Usuario o contraseña incorrectos');
-      }
    }
 
    function logout () {
